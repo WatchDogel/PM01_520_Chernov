@@ -1,0 +1,34 @@
+﻿<Page x:Class="PM01_520_Chernov.Pages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PM01_520_Chernov.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="301" d:DesignWidth="792"
+      Title="AuthPage" Background="#B5D5CA">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="117*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="267*"/>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="449*"/>
+        </Grid.ColumnDefinitions>
+        <Label Name="log" Content="Логин"  Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="71" Grid.Column="1" Grid.Row="1" />
+        <Label Name="PassW" Content="Пароль"  VerticalAlignment="Top" Height="33" HorizontalAlignment="Right" Width="71" Grid.Column="1" Grid.Row="2"/>
+        <TextBlock Name="PassHint" Text=" Пароль" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="142"  Foreground="Gray" Background="Transparent" Grid.Column="2" Grid.Row="2" />
+        <PasswordBox ToolTip="Введите пароль" HorizontalAlignment="Left" Height="33"  VerticalAlignment="Top" Width="142"  Background="Transparent" Name="PassWr" PasswordChanged="PassWr_PasswordChanged" Grid.Column="2" Grid.Row="2" />
+        <Button Name="vhod" Content="Вход" HorizontalAlignment="Right" Height="34"  VerticalAlignment="Bottom" Width="142"  Grid.Column="2" Grid.Row="3" Margin="0,0,310,117" Grid.RowSpan="2" Click="vhod_Click"/>
+        <TextBlock Text=" Логин или почта" Name="txtHintLogin" Foreground="Gray"  HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" VerticalAlignment="Top" Width="142"  Background="Transparent" Grid.Column="2" Grid.Row="1" />
+        <TextBox ToolTip="Введите логин" Name="login" Text="" HorizontalAlignment="Left"  TextWrapping="Wrap" Width="142" Background="Transparent" TextChanged="login_TextChanged" Height="33" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" />
+
+
+    </Grid>
+</Page>
